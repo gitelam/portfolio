@@ -1,4 +1,6 @@
 <script>
+  import { horizontalSlide } from "../custom-transitions/transitions.js";
+
   import { onMount } from "svelte";
 
   import { Link } from "svelte-routing";
@@ -19,8 +21,8 @@
       h = window.innerHeight;
 
       if (w < 1250) {
-        toggle_style = "px-4 py-2 text-neutral-100 border-b-2 text-lg";
-        untoggle_style = "px-4 py-2 hover:text-neutral-100 text-lg";
+        toggle_style = "px-4 py-2 text-neutral-100 border-b-2 text-2xl";
+        untoggle_style = "px-4 py-2 hover:text-neutral-100 text-2xl";
       } else {
         toggle_style = "px-8 py-4 text-neutral-100 border-b-2";
         untoggle_style = "px-8 py-4 hover:text-neutral-100";
@@ -42,18 +44,33 @@
 
   function verificarCambioDeURL() {
     const urlActual = window.location.href;
+
     var path_name = urlActual.split("/").pop();
     // Puedes ajustar esta condición según tu estructura de URL
     if (urlActual.includes(path_name)) {
       toggled_button_name = path_name;
     }
   }
-
-  // Agregar un event listener al evento "popstate" que se activa cuando el usuario navega hacia adelante o hacia atrás en la historia de navegación
   window.addEventListener("popstate", verificarCambioDeURL);
 
+  import { goto } from "$app/navigation";
+
+  function entryPoint() {
+    //basicamente verifica si la locacion actual es por defecto vacia
+    //si la locacion actual es vacia entonces redirige a la primera ruta para cargar projects en router
+    //si no es vacia, continua el proceso logico de verificar y prender los botones segun la ruta correspondiente
+    var urlActual = window.location.href;
+    var pathname = urlActual.split("/").pop();
+    if (pathname == "") {
+      goto(paths[0]);
+    } else {
+      verificarCambioDeURL();
+    }
+  }
+  // Agregar un event listener al evento "popstate" que se activa cuando el usuario navega hacia adelante o hacia atrás en la historia de navegación
+
   // Llamar a la función para verificar el cambio de URL cuando el componente se monta por primera vez
-  onMount(verificarCambioDeURL);
+  onMount(entryPoint);
 </script>
 
 <header class="flex w-full items-center h-20 bg-neutral-500 text-neutral-100">
@@ -83,8 +100,8 @@
     </div>
   {/if}
 
-  <nav class={!sidebar ? "mx-auto" : "w-full mx-2"}>
-    <div class="btns text-3xl font-light text-neutral-400">
+  <nav class={!sidebar ? "mx-auto" : "w-full mx-2 "}>
+    <div class="btns text-3xl font-light text-neutral-400 sticky top-0 z-50">
       {#each paths as path}
         <Link
           to={path}

@@ -1,17 +1,16 @@
 <script>
+
   let withoutSidebarOpenStyle =
-    "px-32 py-0 flex justify-center main-container overflow-auto ";
+    "px-48 py-12 flex justify-center main-container overflow-auto ";
 
   let withSidebarOPenStyle =
-    "px-8 py-0 flex justify-center main-container overflow-auto ";
+    "px-6 py-6 flex justify-center main-container overflow-auto ";
 
   export let sidebar = false;
 
   import { Router, Route, Link } from "svelte-routing";
 
   // import {buttons} from '../lib/app/Navbar.svelte';
-
-
 
   export var COMPONENT;
 
@@ -23,9 +22,11 @@
 
 
   <div class={sidebar ? withSidebarOPenStyle : withoutSidebarOpenStyle}>
-    <div class="flex flex-col">
-      <main>
-        <!--default page to route-->
+    <div class="flex flex-col w-full h-full">
+      <main class="">
+
+        <!--default page to route, is used only to load a component of a dinamically way-->
+        <!--este router solo se utiliza porque no conozco otra forma de cargar un componente de manera dinamica (es decir, que cambie con durante ejecucion)-->
         <Router>
           <Route component={COMPONENT} />
         </Router>

@@ -14,7 +14,9 @@
     <div class="h-screen overflow-auto pl-12 px-8 py-8">
       <!-- svelte-ignore a11y-img-redundant-alt -->
       <SidebarContent />
+      
     </div>
+   
   </aside>
 {/if}
 

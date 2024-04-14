@@ -45,7 +45,7 @@
                 <button class={isAnimate? lessButton : moreButton } >
                     
                     {#if dontShowFirstIcon}
-                        <div class="rotate-180 w-full flex flex-col justify-center items-center" in:fade={{y:0,duration:100}} >  
+                        <div class="w-full flex flex-col justify-center items-center" in:fade={{y:0,duration:100}} >  
                             <Icon icon="ep:arrow-right-bold" width="24" height="24" />
                         </div>
                         
@@ -56,8 +56,8 @@
                     
                     {#if invertArrow}
                         
-                        <div class="text-neutral-800 w-full flex flex-col justify-center items-center space-y-2" in:fade={{y:0,duration:100}}>  
-                            <Icon icon="ep:arrow-right-bold" width="24" height="24" />
+                        <div class=" text-neutral-800 w-full flex flex-col justify-center items-center space-y-2" in:fade={{y:0,duration:100}}>  
+                            <Icon class="rotate-180 " icon="ep:arrow-right-bold" width="24" height="24" />
                             {#if showHideTip}
                             <div class="text-base justify-start hover:text-neutral-900">
                                 hide

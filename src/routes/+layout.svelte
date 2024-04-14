@@ -20,6 +20,8 @@
 
   import { Router, Route, Link } from "svelte-routing";
   import { getPathsComponents } from "./paths.js";
+  
+  //guardando todas las rutas y componentes en un array
   var pages = getPathsComponents();
 
 
@@ -30,7 +32,7 @@
 </svelte:head>
 
 {#if show}
-  <div  class="flex w-full">
+  <div in:fade class="flex w-full">
     <Sidebar bind:open />
 
     <Button bind:open />

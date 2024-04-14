@@ -4,7 +4,7 @@
   let currentIndex = 0;
   import Icon from "@iconify/svelte";
 
-  let data = [
+  export let data = [
     {
       title: "Music",
       content: "I love listen to Mozart. ",
@@ -56,15 +56,15 @@
   </div>
 -->
 
-<div class="h-full w-full rounded-xl">
+<div class="h-full w-full rounded-xl ">
   <div class="rounded-xl bg-zinc-800 w-full h-full flex justify-between">
     <div
       class="p-2 relative overflow-hidden h-full w-full flex flex-col justify-center"
     >
-      <div  class="flex items-center">
+      <div  class="flex items-center ">
         {#if isContentChange}
           <div in:fade>
-            <img 
+            <img  
             class="rounded-xl absolute left-0 right-0 top-0 w-full"
             src={data[currentIndex].url}
             alt=""

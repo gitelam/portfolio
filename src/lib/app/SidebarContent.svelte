@@ -5,21 +5,28 @@
   import MiniCardNavSlider from "./MiniCardNavSlider.svelte";
   import { scale, fade } from "svelte/transition";
 
-  var contactButtonsIconsStyle = "text-zinc-400 hover:bg-zinc-800 hover:rounded-full hover:p-1 hover:text";
-  
+  import { GITHUB, EMAIL, LINKEDIN } from "../../config.js";
+
+  var contactButtonsIconsStyle = "text-zinc-400 hover:bg-zinc-800 hover:p-1 hover:rounded-full hover:text";
 
   let contactButtonIconsArray = [
     {
+      name: "github",
       icon: "mdi:github",
-      style: contactButtonsIconsStyle+"-zinc-100"
+      style: contactButtonsIconsStyle+"-zinc-100",
+      href: GITHUB
     },
     {
+      name: "linkedin",
       icon: "mdi:linkedin",
-      style: contactButtonsIconsStyle+"-blue-500"
+      style: contactButtonsIconsStyle+"-blue-500",
+      href: LINKEDIN
     },
     {
+      name: "email",
       icon: "material-symbols:mail",
-      style: contactButtonsIconsStyle+"-yellow-400"
+      style: contactButtonsIconsStyle+"-yellow-400",
+      href: "mailto:"+EMAIL
     },
   ];
 
@@ -27,19 +34,18 @@
     {
       icon: "logos-python",
       desc: "python",
-      exp: "Api creation on Django and FastApi; This is my experience.",
+      exp: "Basic logic programming; API creation with FASTAPI (SQL).",
 
     },
     {
       icon: "devicon:csharp",
       desc: "c-sharp",
-      exp: "Api creation on Django and FastApi; This is my experience.",
-
+      exp: "Intermediate programming; Data structures, Json, XML, SQL.",
     },
     {
       icon: "logos:javascript",
       desc: "javascript",
-      exp: "Api creation on Django and FastApi; This is my experience.",
+      exp: "Basic programming; DOM manipulation, API consumption.",
     },
     {
       icon: "vscode-icons:file-type-css",
@@ -74,7 +80,7 @@
     {
       icon: "vscode-icons:file-type-excel",
       desc: "excel",
-      exp: "Api creation on Django and FastApi; This is my experience.",
+      exp: "Data manipulation, complex function creation, VBA programming.",
 
     },
     {
@@ -191,7 +197,7 @@
   <div class="flex w-auto">
     <div class="flex flex-col w-auto space-y-4">
       <div class="flex space-x-4 w-auto">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-start">
           <div class="name w-max text-3xl font-semibold">Samuel Hiram</div>
 
           <div class="alias text-3xl font-light">web developer</div>
@@ -199,6 +205,7 @@
 
         <div class="h-full w-full flex items-center justify-center">
           <div class="flex w-max justify-evenly space-x-3 items-center">
+            
             <!-- <button
               class=""
             >
@@ -216,9 +223,11 @@
             </button> -->
             
             {#each contactButtonIconsArray as item}
+            <a  href={item.href} target="_blank">
               <button class={item.style}>
                 <Icon icon={item.icon} width="32" height="32" />
               </button>
+            </a>
             {/each}
 
           </div>
@@ -285,7 +294,6 @@
           </div>
         </div>
       </div>
-
       <MiniCardNavSlider />
     </div>
   </div>
@@ -295,7 +303,5 @@
   .tooltip {
     opacity: 0.9;
   }
-  @media(max-width: 768px){
-
-  }
+  
 </style>
