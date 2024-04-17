@@ -13,7 +13,7 @@
     {
       name: "github",
       icon: "mdi:github",
-      style: contactButtonsIconsStyle+"-zinc-100",
+      style: contactButtonsIconsStyle+"-neutral-100",
       href: GITHUB
     },
     {
@@ -158,7 +158,7 @@
             
             {#if btn_comparation == item.desc}
             <div 
-            class="tooltip h-14 left-0 right-0 bottom-0 top-0 flex justify-center items-center absolute visible bg-zinc-900 text-xs "
+            class="tooltip px-4 h-20 left-0 right-0 bottom-0 top-0 flex justify-start items-center absolute visible bg-neutral-600 text-xs "
           >
               <!--UPPER DESCRIPTION-->
             <div class="flex items-center">
@@ -301,7 +301,7 @@
 
 <style>
   .tooltip {
-    opacity: 0.9;
+    opacity: 1;
   }
   
 </style>

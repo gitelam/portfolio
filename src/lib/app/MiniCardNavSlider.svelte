@@ -4,6 +4,8 @@
   let currentIndex = 0;
   import Icon from "@iconify/svelte";
 
+  export let clickToSee = false;
+
   export let data = [
     {
       title: "Music",
@@ -42,6 +44,16 @@
       isContentChange = true;
     }, 100);
   }
+
+  function openModal(modalName){
+        let modal = document.getElementById(modalName);
+        modal.showModal();
+    }
+
+  function closeModal(modalName){
+        let modal = document.getElementById(modalName);
+        modal.close();
+    }
 </script>
 
 <!--
@@ -56,33 +68,33 @@
   </div>
 -->
 
-<div class="h-full w-full rounded-xl ">
+<div class="h-full w-full rounded-xl" >
   <div class="rounded-xl bg-zinc-800 w-full h-full flex justify-between">
     <div
       class="p-2 relative overflow-hidden h-full w-full flex flex-col justify-center"
     >
       <div  class="flex items-center ">
         {#if isContentChange}
-          <div in:fade>
-            <img  
-            class="rounded-xl absolute left-0 right-0 top-0 w-full"
-            src={data[currentIndex].url}
-            alt=""
-          />
-          <div  class="relative">
-            <h3>{data[currentIndex].title}</h3>
-            <p>{data[currentIndex].content}</p>
-          </div>
-          </div>
+        <div in:fade >
+          <img  
+          class="rounded-xl absolute left-0 right-0 top-0 w-full"
+          src={data[currentIndex].url}
+          alt=""
+        />
+        <div class="relative flex flex-col items-start">
+          <h3>{data[currentIndex].title}</h3>
+          <p>{data[currentIndex].content}</p>
+        </div>
+        </div>
         {/if}
       </div>
 
       <div class="w-full h-full flex justify-between items-end ">
-        <button on:click={()=>{prev()}}  class="relative hover:text-zinc-100 text-zinc-400">
-          <Icon icon="mdi:arrow-left-bold" width="24" height="24" />
+        <button on:click={()=>{prev()}}  class="relative hover:text-blue-500 text-zinc-300">
+          <Icon icon="mdi:arrow-left-bold" width="32" height="32" />
         </button>
-        <button on:click={()=>{next()}} class="relative hover:text-zinc-100 text-zinc-400">
-          <Icon icon="mdi:arrow-right-bold" width="24" height="24" />
+        <button on:click={()=>{next()}} class="relative hover:text-blue-500 text-zinc-300">
+          <Icon icon="mdi:arrow-right-bold" width="32" height="32" />
         </button>
       </div>
 
@@ -90,12 +102,19 @@
   </div>
 </div>
 
+
 <style>
-  img {
+  img{
     opacity: 0.3;
     height: 100%;
     width: 100%;
     object-fit: cover;
     
+  }
+  .dialogImage{
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    object-fit: fit;
   }
 </style>

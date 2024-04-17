@@ -73,7 +73,7 @@
   onMount(entryPoint);
 </script>
 
-<header class="flex w-full items-center h-20 bg-neutral-500 text-neutral-100">
+<header class="flex w-full items-center h-20 bg-neutral-500 text-neutral-100 sticky top-0">
   <!-- <Button bind:open={sidebar}/> -->
 
   {#if !sidebar}
@@ -101,7 +101,7 @@
   {/if}
 
   <nav class={!sidebar ? "mx-auto" : "w-full mx-2 "}>
-    <div class="btns text-3xl font-light text-neutral-400 sticky top-0 z-50">
+    <div class="btns text-3xl font-light text-neutral-400 ">
       {#each paths as path}
         <Link
           to={path}

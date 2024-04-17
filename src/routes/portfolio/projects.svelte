@@ -1,79 +1,204 @@
 <script>
-  import MiniCardNavSlider from "../../lib/app/MiniCardNavSlider.svelte";
+  import FullCardViewer from "../../lib/app/FullCardViewer.svelte";
   import Icon from "@iconify/svelte";
 
-
+  import Image from "../../lib/images/next.png";
+  import Image1 from "../../lib/images/next01.png";
+  import Image2 from "../../lib/images/next02.png";
 
     let thisData = [
         {
-      title: "Music",
-      content: "I love listen to Mozart. ",
-      url: "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+      title: "",
+      content: "",
+      url: Image,
     },
+    {
+      title: "",
+      content: "",
+      url: Image1,
+    },
+    {
+      title: "",
+      content: "",
+      url: Image2,
+    },
+
 
     ]
 
 
+
 </script>
 
-<div class="rounded-xl bg-zinc-800  p-8">
-  <div class="flex w-full h-full justify-between space-x-4">
-    <div class="flex flex-col space-y-6">
-      <div class="font-bold text-xl">Coming soon</div>
-      <div class="flex flex-col space-y-4">
-        <div class="header">
+<div class="h-max rounded-xl bg-neutral-700 p-4">
+  <div class="flex w-full h-full justify-between space-x-4 ">
+    <div class="flex flex-col ">
+
+      <div class="font-semibold text-xl">Working on</div>
+      <div class="flex flex-col  h-full justify-center ">
+        
+        <div class="space-y-4">
           <div class="font-regular text-2xl">Next</div>
-          <div>
-            An activity manager system inspired in Google Classroom and Jira.
+          <div class="flex w-max items-center rounded-md bg-neutral-800 p-2 space-x-3">
+            <Icon icon="devicon:bootstrap" width="32" height="32" />
+            <Icon icon="vscode-icons:file-type-django" width="32" height="32" />
+            <Icon icon="devicon:python" width="32" height="32" />
+            <Icon icon="vscode-icons:file-type-html" width="32" height="32" />
+            <Icon icon="vscode-icons:file-type-css" width="32" height="32" />
+            <Icon icon="logos:javascript" width="26" height="26" />
+          </div>
+          <div class="space-y-4 w-60 text-justify">
+          
+            <p>
+              An activity manager system inspired in Google Classroom and Jira.
+            </p>
+            <p >
+              Where, you can create, assign, and manage activities for your team.
+              </p>
           </div>
         </div>
-        <div class="flex w-max items-center rounded-md bg-neutral-700 p-2 space-x-3">
-          <Icon icon="devicon:bootstrap" width="32" height="32" />
-          <Icon icon="vscode-icons:file-type-django" width="32" height="32" />
-          <Icon icon="devicon:python" width="32" height="32" />
-          <Icon icon="vscode-icons:file-type-html" width="32" height="32" />
-          <Icon icon="vscode-icons:file-type-css" width="32" height="32" />
-          <Icon icon="logos:javascript" width="26" height="26" />
+        
+        <div>
+          <div class="w-full flex justify-end">
+            <a
+              target="_blank"
+              href="https://github.com/gitelam/next"
+              class="flex p-0 font-semibold items-center hover:underline border-neutral-300 space-x-2"
+            >
+              <Icon icon="material-symbols:link" />
+              <div>see on github</div>
+            </a>
+          </div>
         </div>
+        
       </div>
     </div>
 
     
-    <div class="w-full">
-      <MiniCardNavSlider data={thisData} />
+    <div class="zoom w-full rounded-xl hover:outline-double outline-neutral-400">
+        <FullCardViewer  clickToSee={true}  data={thisData} />
     </div>
 
+
   </div>
+  
 </div>
 
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisi ut felis finibus egestas non at tellus. In consequat hendrerit malesuada. Fusce consectetur dui sit amet est sollicitudin accumsan. Aenean porttitor velit congue mauris convallis scelerisque. Etiam imperdiet magna vitae tincidunt tempor. Nunc hendrerit tellus lacus. Aenean dui nunc, lobortis et eleifend non, rutrum ac mauris. Ut urna ipsum, rutrum ac pretium eu, tempus sed sem.
 
-    Nullam auctor tincidunt metus. Pellentesque nec tempus sapien. Nullam quis odio ante. Praesent tristique, neque a consequat posuere, ante odio volutpat tortor, eu faucibus ligula ipsum id metus. Etiam lacus mauris, volutpat vitae interdum sit amet, tincidunt eget est. In viverra, quam eu dictum consequat, tellus ipsum tempor sem, sit amet vestibulum ligula eros ac diam. Sed a risus sit amet velit semper ultrices. Integer id condimentum ex. Mauris ut lectus sed velit lobortis tincidunt vel vitae ante. Proin hendrerit vel nisl quis ultricies. Duis hendrerit porttitor ex. Nunc cursus aliquet urna in placerat. Vivamus tempor imperdiet imperdiet.
+<div class="flex flex-col">
+ 
+
+  <div class="flex p-4 space-x-12 justify-evenly">
+    <div class="space-y-4">
+      <div class="text-2xl font-semibold">
+        EntryFlow
+      </div>
+      <div class="flex w-max items-center rounded-md bg-neutral-800 p-2 space-x-3">
+        <Icon icon="devicon:bootstrap" width="32" height="32" />
+        <Icon icon="vscode-icons:file-type-django" width="32" height="32" />
+        <Icon icon="devicon:python" width="32" height="32" />
+        <Icon icon="vscode-icons:file-type-html" width="32" height="32" />
+        <Icon icon="vscode-icons:file-type-css" width="32" height="32" />
+        <Icon icon="logos:javascript" width="26" height="26" />
+      </div>
+      <div class="truncate whitespace-normal w-96 text-justify text-lg space-y-4">
+        <p>
+          System that manages entries and exits in a company by means of facial recognition
+  The application is built entirely in Ionic, using Javascript services through the OpenCV library to perform facial recognition of the company's employees.
+        </p>
+  
+        <p>
+          In this application I worked as a team, one dedicated to the backend and the other to the frontend. 
+  I built the frontend design of the internal application: Employee creation, employee edition, profile edition, absenteeism and attendance summary as well as the reports and their tables accessing the endpoints correspondents.
+        </p>
+      </div>
+      <div>
+        <div class="w-full flex justify-end">
+          <a
+            target="_blank"
+            href="https://github.com/gitelam/next"
+            class="flex p-0 font-semibold items-center hover:underline border-neutral-300 space-x-2"
+          >
+            <Icon icon="material-symbols:link" />
+            <div>see on github</div>
+          </a>
+        </div>
+      </div>
+    </div>
     
-    Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer auctor leo diam, id porttitor nisi sodales nec. Cras ultricies commodo convallis. Etiam condimentum lacus vitae dui fringilla aliquet. Fusce sed tincidunt mi, at scelerisque neque. Mauris varius pharetra est sed fermentum. Sed at justo elit. Etiam feugiat libero in urna sollicitudin euismod. Nullam in imperdiet justo. Vestibulum congue gravida commodo. Etiam eget imperdiet risus, at rutrum libero. Ut euismod feugiat massa sit amet consectetur. Mauris accumsan non diam sed egestas.
-    
-    Proin mollis placerat est. Fusce tincidunt odio quis urna faucibus, at vulputate ante fringilla. Duis blandit turpis felis. Fusce at nisi auctor, dignissim enim cursus, venenatis orci. Nam aliquet sagittis risus at auctor. Praesent sit amet ante libero. Nunc facilisis tellus id interdum finibus. Nam sed mauris in magna iaculis pulvinar nec a arcu. Quisque cursus a mauris eget sollicitudin. Donec a dui auctor, consequat felis vel, scelerisque augue. Morbi nec lorem sed ante mattis consequat.
-</p>
+    <div class="bg-green-200 w-full flex justify-center">
+      <div class="flex bg-red-200 h-full items-center">
+        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="w-80 rounded-xl">
+      </div>
+    </div>
+  
+  </div>
 
 
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisi ut felis finibus egestas non at tellus. In consequat hendrerit malesuada. Fusce consectetur dui sit amet est sollicitudin accumsan. Aenean porttitor velit congue mauris convallis scelerisque. Etiam imperdiet magna vitae tincidunt tempor. Nunc hendrerit tellus lacus. Aenean dui nunc, lobortis et eleifend non, rutrum ac mauris. Ut urna ipsum, rutrum ac pretium eu, tempus sed sem.
+  <div class="flex p-4 space-x-12 justify-evenly">
+    <div class="space-y-4">
+      <div class="text-2xl font-semibold">
+        EntryFlow
+      </div>
+      <div class="flex w-max items-center rounded-md bg-neutral-800 p-2 space-x-3">
+        <Icon icon="devicon:bootstrap" width="32" height="32" />
+        <Icon icon="vscode-icons:file-type-django" width="32" height="32" />
+        <Icon icon="devicon:python" width="32" height="32" />
+        <Icon icon="vscode-icons:file-type-html" width="32" height="32" />
+        <Icon icon="vscode-icons:file-type-css" width="32" height="32" />
+        <Icon icon="logos:javascript" width="26" height="26" />
+      </div>
+      <div class="truncate whitespace-normal w-96 text-justify text-lg space-y-4">
+        <p>
+          System that manages entries and exits in a company by means of facial recognition
+  The application is built entirely in Ionic, using Javascript services through the OpenCV library to perform facial recognition of the company's employees.
+        </p>
+  
+        <p>
+          In this application I worked as a team, one dedicated to the backend and the other to the frontend. 
+  I built the frontend design of the internal application: Employee creation, employee edition, profile edition, absenteeism and attendance summary as well as the reports and their tables accessing the endpoints correspondents.
+        </p>
+      </div>
+      <div>
+        <div class="w-full flex justify-end">
+          <a
+            target="_blank"
+            href="https://github.com/gitelam/next"
+            class="flex p-0 font-semibold items-center hover:underline border-neutral-300 space-x-2"
+          >
+            <Icon icon="material-symbols:link" />
+            <div>see on github</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-green-200 w-full flex justify-center">
+      <div class="flex bg-red-200 h-full items-center">
+        <img alt="" src="https://assets.justinmind.com/wp-content/uploads/2022/06/login-page-website.png" class=" rounded-xl">
+      </div>
+    </div>
+  
+  </div>
 
-    Nullam auctor tincidunt metus. Pellentesque nec tempus sapien. Nullam quis odio ante. Praesent tristique, neque a consequat posuere, ante odio volutpat tortor, eu faucibus ligula ipsum id metus. Etiam lacus mauris, volutpat vitae interdum sit amet, tincidunt eget est. In viverra, quam eu dictum consequat, tellus ipsum tempor sem, sit amet vestibulum ligula eros ac diam. Sed a risus sit amet velit semper ultrices. Integer id condimentum ex. Mauris ut lectus sed velit lobortis tincidunt vel vitae ante. Proin hendrerit vel nisl quis ultricies. Duis hendrerit porttitor ex. Nunc cursus aliquet urna in placerat. Vivamus tempor imperdiet imperdiet.
-    
-    Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer auctor leo diam, id porttitor nisi sodales nec. Cras ultricies commodo convallis. Etiam condimentum lacus vitae dui fringilla aliquet. Fusce sed tincidunt mi, at scelerisque neque. Mauris varius pharetra est sed fermentum. Sed at justo elit. Etiam feugiat libero in urna sollicitudin euismod. Nullam in imperdiet justo. Vestibulum congue gravida commodo. Etiam eget imperdiet risus, at rutrum libero. Ut euismod feugiat massa sit amet consectetur. Mauris accumsan non diam sed egestas.
-    
-    Proin mollis placerat est. Fusce tincidunt odio quis urna faucibus, at vulputate ante fringilla. Duis blandit turpis felis. Fusce at nisi auctor, dignissim enim cursus, venenatis orci. Nam aliquet sagittis risus at auctor. Praesent sit amet ante libero. Nunc facilisis tellus id interdum finibus. Nam sed mauris in magna iaculis pulvinar nec a arcu. Quisque cursus a mauris eget sollicitudin. Donec a dui auctor, consequat felis vel, scelerisque augue. Morbi nec lorem sed ante mattis consequat.
-</p>
 
 
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed nisi ut felis finibus egestas non at tellus. In consequat hendrerit malesuada. Fusce consectetur dui sit amet est sollicitudin accumsan. Aenean porttitor velit congue mauris convallis scelerisque. Etiam imperdiet magna vitae tincidunt tempor. Nunc hendrerit tellus lacus. Aenean dui nunc, lobortis et eleifend non, rutrum ac mauris. Ut urna ipsum, rutrum ac pretium eu, tempus sed sem.
 
-    Nullam auctor tincidunt metus. Pellentesque nec tempus sapien. Nullam quis odio ante. Praesent tristique, neque a consequat posuere, ante odio volutpat tortor, eu faucibus ligula ipsum id metus. Etiam lacus mauris, volutpat vitae interdum sit amet, tincidunt eget est. In viverra, quam eu dictum consequat, tellus ipsum tempor sem, sit amet vestibulum ligula eros ac diam. Sed a risus sit amet velit semper ultrices. Integer id condimentum ex. Mauris ut lectus sed velit lobortis tincidunt vel vitae ante. Proin hendrerit vel nisl quis ultricies. Duis hendrerit porttitor ex. Nunc cursus aliquet urna in placerat. Vivamus tempor imperdiet imperdiet.
-    
-    Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer auctor leo diam, id porttitor nisi sodales nec. Cras ultricies commodo convallis. Etiam condimentum lacus vitae dui fringilla aliquet. Fusce sed tincidunt mi, at scelerisque neque. Mauris varius pharetra est sed fermentum. Sed at justo elit. Etiam feugiat libero in urna sollicitudin euismod. Nullam in imperdiet justo. Vestibulum congue gravida commodo. Etiam eget imperdiet risus, at rutrum libero. Ut euismod feugiat massa sit amet consectetur. Mauris accumsan non diam sed egestas.
-    
-    Proin mollis placerat est. Fusce tincidunt odio quis urna faucibus, at vulputate ante fringilla. Duis blandit turpis felis. Fusce at nisi auctor, dignissim enim cursus, venenatis orci. Nam aliquet sagittis risus at auctor. Praesent sit amet ante libero. Nunc facilisis tellus id interdum finibus. Nam sed mauris in magna iaculis pulvinar nec a arcu. Quisque cursus a mauris eget sollicitudin. Donec a dui auctor, consequat felis vel, scelerisque augue. Morbi nec lorem sed ante mattis consequat.
-</p>
+
+
+</div>
+
+
+
+
+
+
+<!-- <dialog id="completeImgModal" class="h-full w-full rounded-2xl">
+    <MiniCardNavSlider data={thisData} />
+</dialog> -->
+
+<style>
+  .zoom{
+    height: 50vh;
+  }
+
+</style>
