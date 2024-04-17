@@ -85,7 +85,7 @@
 </div>
 
 
-<div class="flex flex-col">
+<div class="flex flex-col space-y-12">
  
 
   <div class="flex p-4 space-x-12 justify-evenly">
@@ -126,8 +126,9 @@
       </div>
     </div>
     
-    <div class="bg-green-200 w-full flex justify-center">
-      <div class="flex bg-red-200 h-full items-center">
+    <div class="rounded-xl w-full flex justify-center">
+      <div class="flex justify-evenly w-full h-full items-center">
+        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="w-80 rounded-xl">
         <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="w-80 rounded-xl">
       </div>
     </div>
@@ -172,8 +173,8 @@
         </div>
       </div>
     </div>
-    <div class="bg-green-200 w-full flex justify-center">
-      <div class="flex bg-red-200 h-full items-center">
+    <div class="bg-green-200 rounded-xl w-full flex justify-center">
+      <div class="flex  h-full items-center">
         <img alt="" src="https://assets.justinmind.com/wp-content/uploads/2022/06/login-page-website.png" class=" rounded-xl">
       </div>
     </div>
