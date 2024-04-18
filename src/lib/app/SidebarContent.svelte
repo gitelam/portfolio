@@ -130,7 +130,7 @@
 
 </script>
 
-<div in:scale out:fade class="flex space-x-8">
+<div in:scale out:fade class="flex space-x-8 content">
   <div class="w-full flex flex-col space-y-4">
     <div class="w-full flex justify-center">
       <img class="h-38" alt="The project logo" src={image} />
@@ -161,7 +161,7 @@
             class="tooltip px-4 h-20 left-0 right-0 bottom-0 top-0 flex justify-start items-center absolute visible bg-neutral-600 text-xs "
           >
               <!--UPPER DESCRIPTION-->
-            <div class="flex items-center">
+            <div class="flex items-center ">
               <div>My experience on</div>
               <div class="flex flex-col justify-center items-center px-8 uppercase font-bold">
                
@@ -303,5 +303,16 @@
   .tooltip {
     opacity: 1;
   }
-  
+  /* Estilos específicos para Firefox */
+@-moz-document url-prefix() {
+    /* Estilos para Firefox */
+    div{
+        scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+       
+    }
+
+}
+
+
+
 </style>

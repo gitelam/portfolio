@@ -37,7 +37,7 @@
 
     <Button bind:open />
 
-    <div class="w-full">
+    <div class="relative w-full">
       
       
       <Router>

@@ -73,7 +73,7 @@
   onMount(entryPoint);
 </script>
 
-<header class="flex w-full items-center h-20 bg-neutral-500 text-neutral-100 sticky top-0">
+<header class="flex w-full items-center h-20 bg-neutral-500 text-neutral-100  sticky top-0 z-50">
   <!-- <Button bind:open={sidebar}/> -->
 
   {#if !sidebar}

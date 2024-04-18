@@ -71,30 +71,20 @@
 <div class="h-full w-full rounded-xl">
   <div class="rounded-xl w-full h-full flex justify-between">
     <div
-      class="p-2 relative overflow-hidden h-full w-full flex flex-col justify-center"
+      class="p-2 relative overflow-hidden w-full flex flex-col justify-center "
     >
       <div class="flex items-center ">
         {#if isContentChange}
+        <div   in:fade>
           {#if clickToSee}
-            <button
-              in:fade
-              on:click={() => {
-                openModal("slideDialog");
-              }}
-            >
-              <img
-                class="staticImg rounded-xl absolute left-0 right-0 top-0 w-full"
-                src={data[currentIndex].url}
-                alt=""
-              />
-              <div class="relative flex flex-col items-start">
-                <h3>{data[currentIndex].title}</h3>
-                <p>{data[currentIndex].content}</p>
-              </div>
-            </button>
-          {:else}
+          <button
+            in:fade
+            on:click={() => {
+              openModal("slideDialog");
+            }}
+          >
             <img
-              class="rounded-xl absolute left-0 right-0 top-0 w-full"
+              class="staticImg rounded-xl absolute left-0 right-0 top-0 w-full"
               src={data[currentIndex].url}
               alt=""
             />
@@ -102,7 +92,20 @@
               <h3>{data[currentIndex].title}</h3>
               <p>{data[currentIndex].content}</p>
             </div>
-          {/if}
+          </button>
+        {:else}
+          <img
+            class="rounded-xl absolute left-0 right-0 top-0 w-full"
+            src={data[currentIndex].url}
+            alt=""
+          />
+          <div class="relative flex flex-col items-start">
+            <h3>{data[currentIndex].title}</h3>
+            <p>{data[currentIndex].content}</p>
+          </div>
+        {/if}
+        </div>
+          
         {/if}
       </div>
 

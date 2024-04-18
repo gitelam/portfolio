@@ -1,4 +1,7 @@
 <script>
+  
+  import ProjectComponent from '../../lib/app/projects/ProjectComponent.svelte';
+
   import FullCardViewer from "../../lib/app/FullCardViewer.svelte";
   import Icon from "@iconify/svelte";
 
@@ -30,15 +33,15 @@
 
 </script>
 
-<div class="h-max rounded-xl bg-neutral-700 p-4">
-  <div class="flex w-full h-full justify-between space-x-4 ">
+<div class="h-max rounded-xl bg-neutral-700 p-4 ">
+  <div class="flex  w-full h-full space-x-12 ">
     <div class="flex flex-col ">
 
       <div class="font-semibold text-xl">Working on</div>
-      <div class="flex flex-col  h-full justify-center ">
-        
+
+      <div class="flex flex-col h-full justify-center  ">
         <div class="space-y-4">
-          <div class="font-regular text-2xl">Next</div>
+          <div class="font-semibold text-2xl">Next</div>
           <div class="flex w-max items-center rounded-md bg-neutral-800 p-2 space-x-3">
             <Icon icon="devicon:bootstrap" width="32" height="32" />
             <Icon icon="vscode-icons:file-type-django" width="32" height="32" />
@@ -47,7 +50,7 @@
             <Icon icon="vscode-icons:file-type-css" width="32" height="32" />
             <Icon icon="logos:javascript" width="26" height="26" />
           </div>
-          <div class="space-y-4 w-60 text-justify">
+          <div class="w-72 text-lg text-justify  space-y-4">
           
             <p>
               An activity manager system inspired in Google Classroom and Jira.
@@ -55,29 +58,35 @@
             <p >
               Where, you can create, assign, and manage activities for your team.
               </p>
+
+             
+          </div>
+
+          <div>
+            <div class="w-full  flex justify-end">
+              <a
+                target="_blank"
+                href="https://github.com/gitelam/next"
+                class="flex p-0 font-semibold items-center hover:underline border-neutral-300 space-x-2"
+              >
+                <Icon icon="material-symbols:link" />
+                <div>see on github</div>
+              </a>
+            </div>
           </div>
         </div>
         
-        <div>
-          <div class="w-full flex justify-end">
-            <a
-              target="_blank"
-              href="https://github.com/gitelam/next"
-              class="flex p-0 font-semibold items-center hover:underline border-neutral-300 space-x-2"
-            >
-              <Icon icon="material-symbols:link" />
-              <div>see on github</div>
-            </a>
-          </div>
-        </div>
+        
         
       </div>
     </div>
-
     
-    <div class="zoom w-full rounded-xl hover:outline-double outline-neutral-400">
+    <div class="w-full h-full flex align-middle items-center justify-center">
+      <div class="zoom w-full  rounded-xl hover:outline-double outline-neutral-400">
         <FullCardViewer  clickToSee={true}  data={thisData} />
     </div>
+    </div>
+    
 
 
   </div>
@@ -86,7 +95,9 @@
 
 
 <div class="flex flex-col space-y-12">
- 
+  
+  <ProjectComponent />
+
 
   <div class="flex p-4 space-x-12 justify-evenly">
     <div class="space-y-4">
@@ -101,7 +112,7 @@
         <Icon icon="vscode-icons:file-type-css" width="32" height="32" />
         <Icon icon="logos:javascript" width="26" height="26" />
       </div>
-      <div class="truncate whitespace-normal w-96 text-justify text-lg space-y-4">
+      <div class="truncate whitespace-normal w-96 text-justify  space-y-4">
         <p>
           System that manages entries and exits in a company by means of facial recognition
   The application is built entirely in Ionic, using Javascript services through the OpenCV library to perform facial recognition of the company's employees.
@@ -126,10 +137,10 @@
       </div>
     </div>
     
-    <div class="rounded-xl w-full flex justify-center">
-      <div class="flex justify-evenly w-full h-full items-center">
-        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="w-80 rounded-xl">
-        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="w-80 rounded-xl">
+    <div class="rounded-xl w-full flex justify-center  ">
+      <div class="flex space-x-4  w-full h-full items-center justify-evenly ">
+        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="max-w-80 rounded-xl">
+        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="max-w-80 rounded-xl">
       </div>
     </div>
   
@@ -139,7 +150,7 @@
   <div class="flex p-4 space-x-12 justify-evenly">
     <div class="space-y-4">
       <div class="text-2xl font-semibold">
-        EntryFlow
+        Asiscan
       </div>
       <div class="flex w-max items-center rounded-md bg-neutral-800 p-2 space-x-3">
         <Icon icon="devicon:bootstrap" width="32" height="32" />
@@ -149,7 +160,7 @@
         <Icon icon="vscode-icons:file-type-css" width="32" height="32" />
         <Icon icon="logos:javascript" width="26" height="26" />
       </div>
-      <div class="truncate whitespace-normal w-96 text-justify text-lg space-y-4">
+      <div class="truncate whitespace-normal w-96 text-justify space-y-4">
         <p>
           System that manages entries and exits in a company by means of facial recognition
   The application is built entirely in Ionic, using Javascript services through the OpenCV library to perform facial recognition of the company's employees.
@@ -175,7 +186,7 @@
     </div>
     <div class="bg-green-200 rounded-xl w-full flex justify-center">
       <div class="flex  h-full items-center">
-        <img alt="" src="https://assets.justinmind.com/wp-content/uploads/2022/06/login-page-website.png" class=" rounded-xl">
+        <img alt="" src="https://assets.justinmind.com/wp-content/uploads/2022/06/login-page-website.png" class="rounded-xl">
       </div>
     </div>
   
@@ -199,7 +210,7 @@
 
 <style>
   .zoom{
-    height: 50vh;
+    height: 75vh;
   }
 
 </style>
