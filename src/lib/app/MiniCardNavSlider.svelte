@@ -4,7 +4,6 @@
   let currentIndex = 0;
   import Icon from "@iconify/svelte";
 
-  export let clickToSee = false;
 
   export let data = [
     {
