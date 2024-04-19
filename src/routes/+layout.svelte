@@ -37,8 +37,7 @@
 
     <Button bind:open />
 
-    <div class="relative w-full">
-      
+    <div class="w-full">
       
       <Router>
         <Navbar bind:sidebar={open} />
@@ -56,8 +55,6 @@
           </Route>
         {/each}
       </Router>
-
-
 
 
     </div>

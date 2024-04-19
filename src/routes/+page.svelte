@@ -2,10 +2,10 @@
   import Icon from "@iconify/svelte";
 
   let withoutSidebarOpenStyle =
-    "px-48 py-6  flex justify-center main-container  overflow-auto";
+    "px-32 py-6 justify-center main-container overflow-auto";
 
   let withSidebarOPenStyle =
-    "px-6 py-6 flex justify-right main-container overflow-auto";
+    "px-6 py-6 justify-center main-container overflow-auto";
 
   export let sidebar = false;
 
@@ -19,7 +19,7 @@
 </script>
 
 <div class={sidebar ? withSidebarOPenStyle : withoutSidebarOpenStyle}>
-  <div class="flex flex-col w-full h-full">
+  <div class="flex flex-col ">
     <main class="flex flex-col space-y-3">
       <!--default page to route, is used only to load a component of a dinamically way-->
       <!--este router solo se utiliza porque no conozco otra forma de cargar un componente de manera dinamica (es decir, que cambie con durante ejecucion)-->
@@ -27,7 +27,7 @@
         <Route component={COMPONENT} />
       </Router>
 
-      <div class="bg-zinc-800 flex rounded-xl absolute z-50 space-x-4 right-10 bottom-14 p-2">
+      <div class="bg-zinc-800 flex rounded-xl absolute z-50 space-x-4 right-10 bottom-2 p-2">
         <!-- contact icons -->
           <a
            class="hover:text-blue-500"
@@ -39,7 +39,7 @@
           <Icon icon="mdi:linkedin" width="24" height="24" />
           </a>
 
-          <a
+          <a class = "hover:text-zinc-100"
             href="
             https://github.com/gitelam
             "
@@ -49,8 +49,9 @@
           </a>
 
           <a
+           class="hover:text-yellow-400"
             href="
-            https://www.linkedin.com/in/eduardo-alejandro-ramirez-ramirez-7b1b3b1b3/
+            mailto:smiotics@gmail.com
             "
             target="_blank"
           >
@@ -75,12 +76,12 @@
 
 <style>
   .main-container {
-    max-height: 91.5vh;
+    height: 91.5vh;
   }
 
   @media (max-width: 1600px) {
     .main-container {
-      max-height: 89.5vh;
+      height: 89.5vh;
 
     }
   }

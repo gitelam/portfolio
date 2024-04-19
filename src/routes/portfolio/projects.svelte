@@ -1,7 +1,7 @@
 <script>
   
   import ProjectComponent from '../../lib/app/projects/ProjectComponent.svelte';
-
+  import MiniCardNavSlider from "../../lib/app/MiniCardNavSlider.svelte";
   import FullCardViewer from "../../lib/app/FullCardViewer.svelte";
   import Icon from "@iconify/svelte";
 
@@ -63,7 +63,7 @@
           </div>
 
           <div>
-            <div class="w-full  flex justify-end">
+            <div class="  flex justify-end">
               <a
                 target="_blank"
                 href="https://github.com/gitelam/next"
@@ -81,10 +81,8 @@
       </div>
     </div>
     
-    <div class="w-full h-full flex align-middle items-center justify-center">
-      <div class="zoom w-full  rounded-xl hover:outline-double outline-neutral-400">
+    <div class="zoom w-full min-w-12 rounded-xl hover:outline-double outline-neutral-400">
         <FullCardViewer  clickToSee={true}  data={thisData} />
-    </div>
     </div>
     
 
@@ -139,8 +137,8 @@
     
     <div class="rounded-xl w-full flex justify-center  ">
       <div class="flex space-x-4  w-full h-full items-center justify-evenly ">
-        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="max-w-80 rounded-xl">
-        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="max-w-80 rounded-xl">
+        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="min-w-48 rounded-xl">
+        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="min-w-48 rounded-xl">
       </div>
     </div>
   
@@ -211,6 +209,7 @@
 <style>
   .zoom{
     height: 75vh;
+    min-height: 10vh;
   }
 
 </style>

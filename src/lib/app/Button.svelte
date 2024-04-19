@@ -7,7 +7,7 @@
 	export let open = false;
 	
 	function showSideBar(){
-		open = !open;
+		open = !open; 
 		console.log(open);
 	}
 
@@ -51,7 +51,8 @@
                         
                         <div out:scale={{y:0,duration:100}} class="text-xs flex items-start absolute left-12 justify-start hover:text-neutral-900">
                             <p class="flex justify-start text-left">
-                                about me
+                                about
+                                me
                             </p>
                         </div>
                     {/if}

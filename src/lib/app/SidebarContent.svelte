@@ -7,7 +7,7 @@
 
   import { GITHUB, EMAIL, LINKEDIN } from "../../config.js";
 
-  var contactButtonsIconsStyle = "text-zinc-400 hover:bg-zinc-800 hover:p-1 hover:rounded-full hover:text";
+  var contactButtonsIconsStyle = "text-zinc-400 hover:bg-zinc-800 hover:rounded-full hover:text";
 
   let contactButtonIconsArray = [
     {
@@ -158,7 +158,7 @@
             
             {#if btn_comparation == item.desc}
             <div 
-            class="tooltip px-4 h-20 left-0 right-0 bottom-0 top-0 flex justify-start items-center absolute visible bg-neutral-600 text-xs "
+            class="tooltip px-4 h-20 left-0 right-0 bottom-0 top-0 flex w-full justify-center items-center absolute z-10 visible bg-neutral-800 text-xs"
           >
               <!--UPPER DESCRIPTION-->
             <div class="flex items-center ">
@@ -301,7 +301,7 @@
 
 <style>
   .tooltip {
-    opacity: 1;
+    opacity: 0.8;
   }
   /* Estilos específicos para Firefox */
 @-moz-document url-prefix() {
