@@ -1,6 +1,9 @@
 <script>
   import Icon from "@iconify/svelte";
   import FullCardViewer from "../FullCardViewer.svelte";
+
+
+
 </script>
 
 <div class="flex p-4 space-x-12 justify-evenly">
@@ -47,7 +50,9 @@
       <div class="flex w-full h-full items-center py-12">
         <!-- <img alt="" src="https://assets.justinmind.com/wp-content/uploads/2022/06/login-page-website.png" class=" rounded-xl"> -->
 
-
+        <div class="zoom w-full h-full min-w-12 rounded-xl hover:outline-double outline-neutral-400">
+          <FullCardViewer clickToSee={true}  />
+      </div>
       </div>
     </div>
   

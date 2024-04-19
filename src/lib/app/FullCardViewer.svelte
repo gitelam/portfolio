@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   let currentIndex = 0;
   import Icon from "@iconify/svelte";
@@ -45,14 +44,13 @@
     }, 100);
   }
 
+  let showDialog = false;
   function openModal(modalName) {
-    let modal = document.getElementById(modalName);
-    modal.showModal();
+    showDialog = true;
   }
 
   function closeModal(modalName) {
-    let modal = document.getElementById(modalName);
-    modal.close();
+    showDialog = false;
   }
 </script>
 
@@ -80,7 +78,7 @@
           <button
             in:fade
             on:click={() => {
-              openModal("slideDialog");
+              openModal();
             }}
           >
             <img
@@ -131,7 +129,7 @@
   </div>
 </div>
 
-<dialog id="slideDialog" class="w-full h-full rounded-xl">
+<dialog open={showDialog} class="w-full h-full rounded-xl  right-0 bottom-0 left-0 top-0">
   <div class="h-full w-full rounded-xl">
     <div class="rounded-xl bg-zinc-800 w-full h-full flex justify-between">
       <div
@@ -178,7 +176,7 @@
 
             <button
               on:click={() => {
-                closeModal("slideDialog");
+                closeModal();
               }}
               class="p-1 text-white space-x-2 border-0 outline-blue flex h-12 rounded-xl justify-center items-center opacity-95 hover:opacity-100 hover:bg-blue-900"
             >

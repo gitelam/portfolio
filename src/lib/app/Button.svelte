@@ -37,7 +37,7 @@
 </script>
 
 
-    <div  class="absolute z-50">
+    <div  class="absolute ">
         <button on:mouseenter={()=>{showHideTip = true}} on:mouseleave={()=>{showHideTip = false}}  class="absolute h-screen {button_bar_style} bg-opacity-50"  on:click={() => { showSideBar(); doAnimation();}}>
 	
             <div class=" flex items-center space-x-4">
