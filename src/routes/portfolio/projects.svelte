@@ -137,8 +137,8 @@
     
     <div class="rounded-xl w-full flex justify-center  ">
       <div class="flex space-x-4  w-full h-full items-center justify-evenly ">
-        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="min-w-48 rounded-xl">
-        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="min-w-48 rounded-xl">
+        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="min-w-48 w-72 rounded-xl">
+        <img alt="" src="https://i.pinimg.com/originals/4f/76/57/4f765766c108b9e56d5adeb9e2feaa90.png" class="min-w-48 w-72 rounded-xl">
       </div>
     </div>
   
@@ -208,7 +208,7 @@
 
 <style>
   .zoom{
-    height: 75vh;
+    height: 70vh;
     min-height: 10vh;
   }
 

@@ -11,26 +11,14 @@
 
   var h = window.innerHeight;
 
-  let toggle_style = "px-8 py-4 text-neutral-100 border-b-2";
 
-  let untoggle_style = "px-8 py-4 hover:text-neutral-100";
+  let responsive = "max-[600px]:text-xl max-[600px]:p-2 max-[600px]:w-max";
 
-  function detecWinSize() {
-    setInterval(() => {
-      w = window.innerWidth;
-      h = window.innerHeight;
+  let toggle_style = "px-4 py-4 text-neutral-100 border-b-2 "+responsive;
 
-      if (w < 1250) {
-        toggle_style = "px-4 py-2 text-neutral-100 border-b-2 text-2xl";
-        untoggle_style = "px-4 py-2 hover:text-neutral-100 text-2xl";
-      } else {
-        toggle_style = "px-8 py-4 text-neutral-100 border-b-2";
-        untoggle_style = "px-8 py-4 hover:text-neutral-100";
-      }
-    }, 1000);
-  }
+  let untoggle_style = "px-4 py-4 hover:text-neutral-100 "+responsive;
 
-  detecWinSize();
+
 
   function ToggleButton(path_name) {
     toggled_button_name = path_name;
@@ -73,16 +61,15 @@
   onMount(entryPoint);
 </script>
 
-<header class="flex w-full items-center h-20 bg-neutral-500 text-neutral-100  ">
+<header class="flex w-full items-center h-20 bg-neutral-500 text-neutral-100">
   <!-- <Button bind:open={sidebar}/> -->
 
   {#if !sidebar}
-    <div
+
+      <svg
       in:scale={{ y: 200, duration: 400 }}
       out:scale={{ y: 200, duration: 400 }}
-      class=" absolute right-0 pr-2"
-    >
-      <svg
+        class="absolute right-0 pr-2"
         xmlns="http://www.w3.org/2000/svg"
         width="160"
         viewBox="0 0 179 48"
@@ -97,11 +84,10 @@
           fill="#1F1F1F"
         />
       </svg>
-    </div>
   {/if}
 
   <nav class={!sidebar ? "mx-auto" : "w-full mx-2 "}>
-    <div class="btns text-3xl font-light text-neutral-400 ">
+    <div class="btns text-3xl font-light text-neutral-400">
       {#each paths as path}
         <Link
           to={path}

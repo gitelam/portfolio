@@ -18,8 +18,6 @@
         <Icon icon="vscode-icons:file-type-html" width="32" height="32" />
         <Icon icon="vscode-icons:file-type-css" width="32" height="32" />
         <Icon icon="logos:javascript" width="26" height="26" />
-        
-       
       </div>
       <div class="w-72 text-lg space-y-4 text-justify ">
           <p>

@@ -37,7 +37,7 @@
 </script>
 
 
-    <div  class="absolute ">
+    <div  class="absolute max-[600px]:hidden">
         <button on:mouseenter={()=>{showHideTip = true}} on:mouseleave={()=>{showHideTip = false}}  class="absolute h-screen {button_bar_style} bg-opacity-50"  on:click={() => { showSideBar(); doAnimation();}}>
 	
             <div class=" flex items-center space-x-4">
@@ -51,8 +51,7 @@
                         
                         <div out:scale={{y:0,duration:100}} class="text-xs flex items-start absolute left-12 justify-start hover:text-neutral-900">
                             <p class="flex justify-start text-left">
-                                about
-                                me
+                                see details
                             </p>
                         </div>
                     {/if}

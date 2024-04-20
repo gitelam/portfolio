@@ -27,7 +27,7 @@
         <Route component={COMPONENT} />
       </Router>
 
-      <div class="bg-zinc-800 flex rounded-xl absolute z-50 space-x-4 right-10 bottom-2 p-2">
+      <div class={!sidebar ?"bg-zinc-800 flex flex-col items-center justify-center rounded-xl absolute z-50 space-y-2 right-0 mx-14 bottom-14 p-2" :"hidden"}>
         <!-- contact icons -->
           <a
            class="hover:text-blue-500"

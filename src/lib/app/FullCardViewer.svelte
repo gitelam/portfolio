@@ -129,7 +129,7 @@
   </div>
 </div>
 
-<dialog open={showDialog} class="w-full h-full rounded-xl  right-0 bottom-0 left-0 top-0">
+<dialog open={showDialog} class="w-full h-full rounded-xl absolute z-50 right-0 bottom-0 left-0 top-0">
   <div class="h-full w-full rounded-xl">
     <div class="rounded-xl bg-zinc-800 w-full h-full flex justify-between">
       <div
